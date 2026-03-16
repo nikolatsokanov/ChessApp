@@ -107,7 +107,7 @@ bool whiteToMove = true;
         chessboard[right][down] = ".";
         chessboard[dropRight][dropDown] = piece;
 
-        // Always present a complete frame to raylib (BeginDrawing/EndDrawing must be paired).
+        //draw board
         BeginDrawing();
         ClearBackground(RAYWHITE);
         DrawChessBoard(chessboard, whiteSquare, blackSquare, wPawn, bPawn, wRook, bRook, wQueen, bQueen, wKing, bKing, wBishop, bBishop, wKnight, bKnight);
@@ -131,8 +131,8 @@ void DrawChessBoard(string chessboard[9][9],
                     Texture2D wBishop, Texture2D bBishop,
                     Texture2D wKnight, Texture2D bKnight)
 {
-    for (int y = 1; y <= 8; y++) {      // skip labels
-        for (int x = 1; x <= 8; x++) {  // skip labels
+    for (int y = 1; y <= 8; y++) {
+        for (int x = 1; x <= 8; x++) {
             // Draw square texture
             if ((x + y) % 2 == 0)
                 DrawTextureEx(whiteSquare, (Vector2){(float)(x-1)*TILE, (float)(y-1)*TILE}, 0, (float)TILE / whiteSquare.width, WHITE);

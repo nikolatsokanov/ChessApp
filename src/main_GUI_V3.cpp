@@ -38,7 +38,7 @@ bool whiteToMove = true;
     
     InitWindow(800, 800, "Chess");
     SetTargetFPS(60);
-
+  
 
     // Load piece textures
     Texture2D wPawn = LoadTexture("textures/white-pawn.png");
